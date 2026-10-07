@@ -1,0 +1,9 @@
+{
+  "_ayuda": "Cambia los valores y guarda el archivo. Qué hace cada opción: mira README.md",
+  "horasMinimas": 3,
+  "minutosEntreRevisiones": 15,
+  "horasMaximasSinCromo": 5,
+  "aparecerEnLinea": false,
+  "excluir": [],
+  "soloEstos": []
+}

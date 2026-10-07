@@ -1,0 +1,24 @@
+{
+  "name": "farmeador-cromos-steam",
+  "version": "1.1.0",
+  "description": "Farmea los cromos de Steam de tus juegos sin abrirlos",
+  "private": true,
+  "main": "farmeador.js",
+  "scripts": {
+    "start": "node farmeador.js",
+    "test": "node ../pruebas/probar-insignias.js && node ../pruebas/probar-web.js && node ../pruebas/probar-sesion.js && node ../pruebas/probar-farmeo.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "css-select": "^5.2.2",
+    "domutils": "^3.2.2",
+    "htmlparser2": "^9.1.0",
+    "steam-user": "^5.3.0"
+  },
+  "overrides": {
+    "adm-zip": "^0.6.1",
+    "steam-appticket": "^2.0.1"
+  }
+}
