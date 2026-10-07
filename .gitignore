@@ -1,0 +1,15 @@
+# Librerías: el programa las descarga solo la primera vez (versiones exactas de package-lock.json)
+node_modules/
+
+# Sesión guardada de la versión 1.0. Nunca la subas: es la llave de tu cuenta de Steam.
+# (desde la versión 1.1 la sesión se guarda fuera de esta carpeta)
+programa/datos/
+sesion.json
+*.tmp
+
+# Varios
+npm-debug.log*
+__pycache__/
+.DS_Store
+Thumbs.db
+desktop.ini
