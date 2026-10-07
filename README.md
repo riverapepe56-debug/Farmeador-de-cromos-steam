@@ -65,7 +65,6 @@ Steam te devuelve el dinero de un juego si lo pides dentro de los 14 días de co
 - **Para cerrar la sesión guardada**, haz doble clic en **Borrar sesion guardada.bat**. Para quitarle el acceso también desde Steam, entra a [Dispositivos autorizados](https://store.steampowered.com/account/authorizeddevices) y quita el del farmeador.
 - **Solo se conecta a Steam.** No abre puertos en tu PC, no envía datos a nadie más, no hace intercambios, compras ni nada en el Mercado, y no necesita permisos de administrador.
 - **No trae ningún .exe.** Todo el programa es código que puedes leer, en la carpeta `programa`. Si una copia trae archivos `.exe` o `.dll`, no la uses.
-- **Descárgalo solo del repositorio original.** Un programa que pide tu contraseña de Steam es justo lo que usan los estafadores: una copia modificada podría robarte la cuenta.
 - Las librerías se descargan con las versiones exactas de `package-lock.json` (npm comprueba su huella) y sin ejecutar scripts de instalación.
 
 ## Problemas comunes
@@ -76,18 +75,4 @@ Steam te devuelve el dinero de un juego si lo pides dentro de los 14 días de co
 - **"Faltan librerías del programa"**: borra la carpeta `programa\node_modules` y vuelve a abrir **Iniciar farmeador.bat**.
 - No abras el farmeador dos veces con la misma cuenta: el primero se cierra.
 
-## Para desarrolladores
 
-- `programa/farmeador.js`: punto de entrada (inicio de sesión y consola).
-- `programa/lib/`: el farmeo (`farmeo.js`), la lectura de insignias (`insignias.js`), las consultas a steamcommunity.com (`web.js`), la sesión guardada (`sesion.js`), la configuración (`config.js`) y la consola (`consola.js`).
-- `pruebas/`: pruebas con un Steam simulado. No usan ninguna cuenta real.
-
-```
-cd programa
-npm ci --ignore-scripts
-npm test
-```
-
-`pruebas/probar-consola.py` prueba la consola en una terminal de verdad y solo funciona en Linux o macOS.
-
-Librerías: [steam-user](https://github.com/DoctorMcKay/node-steam-user) para la conexión con Steam, y htmlparser2, css-select y domutils para leer las páginas. El algoritmo de farmeo es el mismo que usa [ArchiSteamFarm](https://github.com/JustArchiNET/ArchiSteamFarm).
